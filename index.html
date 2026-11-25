@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sweet Cake - Cake Ordering</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+    <div class="logo">
+        🎂 Sweet Cake
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#cakes">Cakes</a>
+        <a href="#order">Order</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+<section id="home" class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            Delicious Cakes Made For You 🎂
+        </h1>
+
+        <p>
+            Fresh, beautiful and delicious cakes for every occasion.
+        </p>
+
+        <a href="#cakes" class="btn">
+            Order Your Cake
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CAKES -->
+<section id="cakes" class="cakes-section">
+
+    <h2>Our Cakes</h2>
+
+    <p class="subtitle">
+        Choose your favourite cake
+    </p>
+
+
+    <!-- SEARCH -->
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="cakeSearch"
+            placeholder="🔎 Search for a cake..."
+            oninput="searchCakes()"
+        >
+
+    </div>
+
+
+    <!-- CAKES -->
+    <div class="cake-container">
+
+
+        <!-- 1 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80"
+                alt="Chocolate Cake">
+
+            <h3>Chocolate Cake</h3>
+
+            <p class="price">
+                From ₦10,000
+            </p>
+
+            <button onclick="selectCake('Chocolate Cake', 10000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 2 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80"
+                alt="Birthday Cake">
+
+            <h3>Birthday Cake</h3>
+
+            <p class="price">
+                From ₦12,000
+            </p>
+
+            <button onclick="selectCake('Birthday Cake', 12000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=800&q=80"
+                alt="Vanilla Cake">
+
+            <h3>Vanilla Cake</h3>
+
+            <p class="price">
+                From ₦9,000
+            </p>
+
+            <button onclick="selectCake('Vanilla Cake', 9000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80"
+                alt="Strawberry Cake">
+
+            <h3>Strawberry Cake</h3>
+
+            <p class="price">
+                From ₦11,000
+            </p>
+
+            <button onclick="selectCake('Strawberry Cake', 11000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1586788680434-30d324b2d46f?auto=format&fit=crop&w=800&q=80"
+                alt="Red Velvet Cake">
+
+            <h3>Red Velvet Cake</h3>
+
+            <p class="price">
+                From ₦13,000
+            </p>
+
+            <button onclick="selectCake('Red Velvet Cake', 13000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 6 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80"
+                alt="Wedding Cake">
+
+            <h3>Wedding Cake</h3>
+
+            <p class="price">
+                From ₦35,000
+            </p>
+
+            <button onclick="selectCake('Wedding Cake', 35000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 7 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?auto=format&fit=crop&w=800&q=80"
+                alt="Carrot Cake">
+
+            <h3>Carrot Cake</h3>
+
+            <p class="price">
+                From ₦10,500
+            </p>
+
+            <button onclick="selectCake('Carrot Cake', 10500)">
+                Choose Cake
+            </button>
+
+        </div>
+
+
+        <!-- 8 -->
+        <div class="cake-card">
+
+            <img
+                src="https://images.unsplash.com/photo-1542826438-bd32f43d626f?auto=format&fit=crop&w=800&q=80"
+                alt="Fruit Cake">
+
+            <h3>Fruit Cake</h3>
+
+            <p class="price">
+                From ₦14,000
+            </p>
+
+            <button onclick="selectCake('Fruit Cake', 14000)">
+                Choose Cake
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ORDER -->
+<section id="order" class="order-section">
+
+    <h2>
+        Your Cake Order 🎂
+    </h2>
+
+    <p class="subtitle">
+        Choose your cake size and complete your order.
+    </p>
+
+
+    <div class="order-box">
+
+        <div id="selectedCake">
+            No cake selected yet.
+        </div>
+
+
+        <!-- CAKE SIZE -->
+
+        <label>
+            Cake Size
+        </label>
+
+        <select id="cakeSize" onchange="changeSize()">
+
+            <option value="small">
+                Small
+            </option>
+
+            <option value="medium" selected>
+                Medium
+            </option>
+
+            <option value="large">
+                Large
+            </option>
+
+        </select>
+
+
+        <!-- QUANTITY -->
+
+        <label>
+            Quantity
+        </label>
+
+        <div class="quantity">
+
+            <button onclick="decreaseQuantity()">
+                −
+            </button>
+
+            <span id="quantity">
+                1
+            </span>
+
+            <button onclick="increaseQuantity()">
+                +
+            </button>
+
+        </div>
+
+
+        <!-- DELIVERY -->
+
+        <label>
+            Delivery Location
+        </label>
+
+        <select id="deliveryLocation" onchange="updateOrder()">
+
+            <option value="town">
+                Within Town - ₦1,000
+            </option>
+
+            <option value="outside">
+                Outside Town - ₦2,000
+            </option>
+
+        </select>
+
+
+        <!-- CAKE TOTAL -->
+
+        <p>
+            Cake Total:
+            ₦<span id="cakeTotal">0</span>
+        </p>
+
+
+        <!-- DELIVERY FEE -->
+
+        <p>
+            Delivery Fee:
+            ₦<span id="deliveryFee">0</span>
+        </p>
+
+
+        <!-- GRAND TOTAL -->
+
+        <p class="total">
+
+            Grand Total:
+            ₦<span id="total">0</span>
+
+        </p>
+
+
+        <h3>
+            Customer Information
+        </h3>
+
+
+        <input
+            type="text"
+            id="customerName"
+            placeholder="Your full name"
+        >
+
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Phone number"
+        >
+
+
+        <input
+            type="text"
+            id="address"
+            placeholder="Delivery address"
+        >
+
+
+        <label>
+            Delivery Date
+        </label>
+
+        <input
+            type="date"
+            id="deliveryDate"
+        >
+
+
+        <!-- BUTTONS -->
+
+        <div class="order-buttons">
+
+            <button
+                class="whatsapp"
+                onclick="orderWhatsApp()">
+                📱 Order via WhatsApp
+            </button>
+
+
+            <button
+                class="sms"
+                onclick="orderSMS()">
+                💬 Order via SMS
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Sweet Cake | Cake Ordering System
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
